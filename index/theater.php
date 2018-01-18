@@ -1,3 +1,6 @@
+
+
+coucou
 <?php
 $arr = array('name' => 'NomCinema');
 
