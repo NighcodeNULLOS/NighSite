@@ -1,0 +1,85 @@
+html, body{
+	background-color: #f2f2f2;
+}
+
+h1{
+	background-image: url( https://static1.squarespace.com/static/59c2ccd8bce176b6f4b9087b/t/59e67a60268b96bcf66eecd5/1508276848809/GalaxyHeader.jpg?format=1500w );
+	font-size: 90px;
+	text-align: center;
+	color: #ffffff;
+	padding: 4%;
+	margin: -16px;
+	margin-left: 5.25%;
+	margin-right: 5.25%;
+	font-family: 'Acme', sans-serif;
+}
+
+ul.menu{
+    text-align: center;
+    list-style: none outside none;
+	font-weight: bold;
+	background-color:#000000;
+	padding: 5px;
+	border: 1px solid #000000;
+	margin-left: 5.25%;
+	margin-right: 5.25%;
+}
+
+ul.menu li{
+    display: inline-block;
+	padding-left: 6px;
+	padding-right: 6px;
+}
+
+a.menu{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+h2 {
+	text-align: center;
+	font-size: 40px;
+	margin-top: auto;
+	margin-bottom: 40px;
+	margin-left: 5%;
+	margin-right: 5%;
+	border: 2px solid #000000;
+	padding: 5px;
+	font-family: 'Satisfy', cursive;
+	background-color: #ffffff;
+}
+
+img.displayed {
+	display: block;
+	margin: auto;
+	width: 60%;
+}
+
+p.center{
+	text-align: center;
+}
+
+.col-1-1{
+	margin-top: 5%;
+}
+
+.pub{
+width: 100%; 
+height: 800px;  
+}
+
+h6{
+font-size: 20px;
+text-align: center;
+}
+
+.footer{
+	/*text-align: right;*/
+	font-style: italic;
+	font-size: 14px;
+	color: #ffffff;
+	border: 1px solid #000000;
+	padding: 0.5%;
+	padding-right: 2%;
+	background-color: #000000;
+}
