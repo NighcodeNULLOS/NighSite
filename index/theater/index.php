@@ -1,4 +1,4 @@
-
+header('Content-Type: application/json');
 
 <?php
 $arr = array('name' => 'NomCinema');
