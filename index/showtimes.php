@@ -1,7 +1,7 @@
 
 <?php
 header('Content-Type: application/json');
-$arr = array('id' => array('13','14','18'));
+$arr = array('id' => '13','id' => '14');
 
 echo json_encode($arr);
 ?>
