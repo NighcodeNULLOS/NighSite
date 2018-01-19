@@ -24,9 +24,10 @@ header('Content-Type: application/json');
 			
 			$data = ['id' => strval(rand(1, 4000)),'name' => $json_obj['name']];
 
-			$sql = "INSERT INTO seances (name)
-			VALUES ($json_obj['name'])";
-			echo $sql;
+			// $sql = "INSERT INTO seances (name)
+			// VALUES ($json_obj['name'])";
+			// echo $sql;
+			
 			echo json_encode($data);
 		}
 		else
