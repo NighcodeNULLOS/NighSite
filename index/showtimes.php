@@ -12,9 +12,12 @@ header('Content-Type: application/json');
 
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
+
 		if (isset($_POST['name']))
 		{
-			$data = ['id' => '4000','name' => $_POST['name']];
+
+			
+			$data = ['id' => strval(rand(1, 4000)),'name' => json_decode($_POST['name'])]; 
 			echo json_encode($data);
 			// for ($i=0;$i<count($arr);$i++)
 			// {
