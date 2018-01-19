@@ -3,5 +3,8 @@ RewriteEngine On
 RewriteRule ^theater$ theater.php
 RewriteRule ^showtimes$ showtimes.php
 
+ErrorDocument 404 /Error404.php
+ErrorDocument 400 /Error400.php
 
 RewriteRule ^showtimes/([0-9]+)$ showtimes.php?id=$1 [NC,L]
+RewriteRule ^showtimes/([0-9]+)/reservation$ reservation.php?id=$1 [NC,L]
