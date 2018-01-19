@@ -44,6 +44,7 @@ header('Content-Type: application/json');
 		else
 		{
 			http_response_code(400);
+			include('Error400.html')
 			die();
 		}
 
@@ -71,6 +72,7 @@ header('Content-Type: application/json');
 			}
 			else {
 				http_response_code(404);
+				include('Error404.html')
 				die();
 			}
 

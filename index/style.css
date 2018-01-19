@@ -29,7 +29,7 @@ ul.menu li{
 }
 
 a.menu{
-	text-decoration: none;
+	text-decoration: underline;
 	color: #ffffff;
 }
 
@@ -123,6 +123,7 @@ h6{
 	background-color: #000000;
 	margin-left: -10px;
 	margin-right: -10px;
+	text-align: center;
 }
 
 .reseau{
@@ -142,8 +143,16 @@ form {
 
 label {
     display: inline-block;
-    width: 50px;
+    width: 60px;
     text-align: right;
+}
+
+input, textarea {
+    width: 250px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	border: 1px solid #000000;
+	margin-left: 2%;
 }
 
 form div+div {
