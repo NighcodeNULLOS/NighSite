@@ -1,6 +1,6 @@
 
 <?php
-
+header('Content-Type: application/json');
 	//$lol = isset($_POST['name']) ? $_POST['name'] : NULL;
 
 	//$mdr = json_decode(stripslashes($_POST),true);
