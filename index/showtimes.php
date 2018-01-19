@@ -17,7 +17,7 @@ header('Content-Type: application/json');
 		{
 
 			
-			$data = ['id' => strval(rand(1, 4000)),'name' => json_decode($_POST['name'])]; 
+			$data = ['id' => strval(rand(1, 4000)),'name' => $_POST['name']]; 
 			echo json_encode($data);
 			// for ($i=0;$i<count($arr);$i++)
 			// {
