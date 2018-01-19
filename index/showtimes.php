@@ -23,23 +23,8 @@ header('Content-Type: application/json');
 
 			
 			$data = ['id' => strval(rand(1, 4000)),'name' => $json_obj['name']]; 
+			echo 'coucou';
 			echo json_encode($data);
-			// for ($i=0;$i<count($arr);$i++)
-			// {
-			// 	if ($arr[$i]['name'] == $seance_to_find) {
-			// 		$answer = $arr[$i];
-			// 		$bool = 1;
-			// 		if ($bool == 1) {echo json_encode($answer);}
-			// 	}
-				
-				
-
-			// }
-			// if ($bool == 0)
-			// 	{
-			// 		http_response_code(404);
-			// 		die();
-			// 	}
 		}
 		else
 		{
