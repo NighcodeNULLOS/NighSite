@@ -14,23 +14,24 @@ header('Content-Type: application/json');
 
 		if (isset($_POST['name']))
 		{
-			$seance_to_find = $_POST['name'];
-			for ($i=0;$i<count($arr);$i++)
-			{
-				if ($arr[$i]['name'] == $seance_to_find) {
-					$answer = $arr[$i];
-					$bool = 1;
-					if ($bool == 1) {echo json_encode($answer);}
-				}
+			$data = ['id' => '4000','name' => $_POST['name']];
+			echo json_encode($data);
+			// for ($i=0;$i<count($arr);$i++)
+			// {
+			// 	if ($arr[$i]['name'] == $seance_to_find) {
+			// 		$answer = $arr[$i];
+			// 		$bool = 1;
+			// 		if ($bool == 1) {echo json_encode($answer);}
+			// 	}
 				
 				
 
-			}
-			if ($bool == 0)
-				{
-					http_response_code(404);
-					die();
-				}
+			// }
+			// if ($bool == 0)
+			// 	{
+			// 		http_response_code(404);
+			// 		die();
+			// 	}
 		}
 		else
 		{
