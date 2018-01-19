@@ -19,17 +19,18 @@ header('Content-Type: application/json');
 			{
 				if ($arr[$i]['name'] == $seance_to_find) {
 					$answer = $arr[$i];
-					echo json_encode($answer);
 					$bool = 1;
+					if ($bool == 1) {echo json_encode($answer);}
 				}
-				if ($bool == 0)
+				
+				
+
+			}
+			if ($bool == 0)
 				{
 					http_response_code(404);
 					die();
 				}
-				
-
-			}
 		}
 		else
 		{
