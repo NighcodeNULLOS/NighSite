@@ -13,8 +13,7 @@ header('Content-Type: application/json');
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 		$json_str = file_get_contents('php://input');
-		$json_obj = json_decode($json_str);
-
+		$json_obj = json_decode($json_str,true);
 		if (isset($json_obj['name']))
 		{
 
