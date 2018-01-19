@@ -2,3 +2,6 @@ Options +FollowSymlinks
 RewriteEngine On
 RewriteRule ^theater$ theater.php
 RewriteRule ^showtimes$ showtimes.php
+
+
+RewriteRule ^showtimes/([0-9]+)$ showtimes.php?id=$1 [NC,L]

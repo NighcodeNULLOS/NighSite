@@ -10,6 +10,10 @@ header('Content-Type: application/json');
 	$arr = array(array('id' => '456','name' => 'Star-Wars'),array('id' => '123','name' => 'Les Minions'));
 	$bool = 0;
 
+
+	// print_r($_REQUEST);
+
+
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 		$json_str = file_get_contents('php://input');
@@ -49,7 +53,34 @@ header('Content-Type: application/json');
 
 	
 	if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-		echo json_encode($arr);
+
+		if ($_GET['id'])
+		{
+			$seance_to_find = $_GET['id'];
+			for ($i=0;$i<count($arr);$i++)
+			{
+				if ($arr[$i]['id'] == $seance_to_find) {
+					$answer = $arr[$i];
+					$bool = 1;
+				}
+
+			}
+			
+			if ($bool == 1) {
+				echo json_encode($answer);
+			}
+			else {
+				http_response_code(404);
+				die();
+			}
+
+		}
+		else
+		{
+			echo json_encode($arr);
+		}
+		
+		
 	}
 
 
