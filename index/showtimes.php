@@ -21,13 +21,14 @@ header('Content-Type: application/json');
 		if (isset($json_obj['name']))
 		{
 
-			
-			$data = ['id' => strval(rand(1, 4000)),'name' => $json_obj['name']];
+			//$data = ['id' => strval(rand(1, 4000)),'name' => $json_obj['name']];
 
 			// $sql = "INSERT INTO seances (name)
 			// VALUES ($json_obj['name'])";
 			// echo $sql;
-			
+
+			$data = ['id' => strval(rand(1, 4000)),'name' => $json_obj['name']]; 
+
 			echo json_encode($data);
 		}
 		else
@@ -44,7 +45,7 @@ header('Content-Type: application/json');
 	
 	if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
-		if ($_GET['id'])
+		if (isset($_GET['id']))
 		{
 			$seance_to_find = $_GET['id'];
 			for ($i=0;$i<count($arr);$i++)
@@ -61,7 +62,6 @@ header('Content-Type: application/json');
 			}
 			else {
 				http_response_code(404);
-				//include('Error404.html');
 				die();
 			}
 

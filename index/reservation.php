@@ -2,9 +2,18 @@
 <?php
 header('Content-Type: application/json');
 
+
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-		if (isset($_GET['id']))
+
+		$json_str = file_get_contents('php://input');
+		$json_obj = json_decode($json_str,true);
+		if (isset($json_obj))
+		{
+			$data = ['id' => $_GET['id'],'row' => $json_obj['row'],'seat' => $json_obj['seat']]; 
+			echo json_encode($data);
+		}
+		else if (isset($_GET['id']))
 		{
 
 			
@@ -22,36 +31,4 @@ header('Content-Type: application/json');
 
 	}
 
-	
-	if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-
-		if ($_GET['id'])
-		{
-			$seance_to_find = $_GET['id'];
-			for ($i=0;$i<count($arr);$i++)
-			{
-				if ($arr[$i]['id'] == $seance_to_find) {
-					$answer = $arr[$i];
-					$bool = 1;
-				}
-
-			}
-			
-			if ($bool == 1) {
-				echo json_encode($answer);
-			}
-			else {
-				http_response_code(404);
-				//include('Error404.php');
-				die();
-			}
-
-		}
-		else
-		{
-			echo json_encode($arr);
-		}
-		
-		
-	}
 ?>
